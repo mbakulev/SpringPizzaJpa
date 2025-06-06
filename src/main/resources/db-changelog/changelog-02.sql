@@ -1,5 +1,5 @@
 CREATE TABLE public.kitchen (
-                                id int4 NOT NULL,
+                                id serial4 NOT NULL,
                                 "name" varchar NOT NULL,
                                 CONSTRAINT kitchen_pk PRIMARY KEY (id)
 );
