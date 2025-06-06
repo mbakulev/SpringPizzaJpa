@@ -10,5 +10,10 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         <rollback/>
     </changeSet>
 
+    <changeSet id="init_tables" author="MBakulev">
+        <sqlFile encoding="utf8" path="/db-changelog/changelog-02.sql"/>
+        <rollback/>
+    </changeSet>
+
 
 </databaseChangeLog>
