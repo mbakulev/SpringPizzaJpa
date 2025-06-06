@@ -29,15 +29,15 @@ public class PizzeriaApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        Order order1 = new Order(
-                List.of(
-                        new MargaritaPizza(Pizza.Size.MEDIUM, configPizza),
-                        new MargaritaPizza(Pizza.Size.LARGE, configPizza)
-                ),
-                "Иван Иванов"
-        );
-
-        customerService.placeOrder(order1);
+//        Order order1 = new Order(
+//                List.of(
+//                        new MargaritaPizza(Pizza.Size.MEDIUM, configPizza),
+//                        new MargaritaPizza(Pizza.Size.LARGE, configPizza)
+//                ),
+//                "Иван Иванов"
+//        );
+//
+//        customerService.placeOrder(order1);
 
     }
 }
