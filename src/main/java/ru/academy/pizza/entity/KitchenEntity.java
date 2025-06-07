@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,4 +18,6 @@ public class KitchenEntity {
     @SequenceGenerator(name = "kitchen_id_seq", sequenceName = "kitchen_id_seq", allocationSize = 1)
     private Long id;
     private String name;
+    @OneToMany(mappedBy = "kitchenId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Collection<DishEntity> dishes;
 }

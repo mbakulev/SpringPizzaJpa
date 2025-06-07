@@ -16,8 +16,9 @@ public class DishEntity {
     @SequenceGenerator(name = "dish_id_seq", sequenceName = "dish_id_seq", allocationSize = 1)
     private Long id;
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "kitchen_id")
-    private KitchenEntity kitchen;
+//    @ManyToOne
+//    @JoinColumn(name = "kitchen_id")
+//    private KitchenEntity kitchen;
+    private Long kitchenId;
     private double price;
 }
