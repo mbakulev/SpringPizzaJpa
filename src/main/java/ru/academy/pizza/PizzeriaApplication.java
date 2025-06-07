@@ -11,6 +11,9 @@ import ru.academy.pizza.model.MargaritaPizza;
 import ru.academy.pizza.model.Order;
 import ru.academy.pizza.model.Pizza;
 
+import ru.academy.pizza.service.MenuService;
+import ru.academy.pizza.service.OrderService;
+
 import java.util.List;
 
 @SpringBootApplication
@@ -22,12 +25,21 @@ public class PizzeriaApplication implements CommandLineRunner {
     @Autowired
     private ConfigPizza configPizza;
 
+    @Autowired
+    private OrderService orderService;
+
+    @Autowired
+    private MenuService menuService;
+
     public static void main(String[] args) {
         SpringApplication.run(PizzeriaApplication.class, args);
     }
 
     @Override
     public void run(String... args) {
+
+        orderService.showOrders();
+        menuService.showMenu();
 
 //        Order order1 = new Order(
 //                List.of(
